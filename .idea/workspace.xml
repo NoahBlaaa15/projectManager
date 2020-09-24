@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3beab96-3028-415e-836d-a0125e9233c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/projectManager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/n04h/iot/controller/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/n04h/iot/controller/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/n04h/iot/controller/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/google-java-format.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projectManager.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/n04h/iot/controller/Home.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/n04h/iot/controller/Home.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/n04h/iot/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/n04h/iot/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/production/projectManager/de/n04h/iot/controller/Main.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\noahb\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6397.94\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hmVUkOye8D1P7ERyqmmkYNv8fG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.n04h.iot.controller.Main" />
+      <module name="projectManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.n04h.iot.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3beab96-3028-415e-836d-a0125e9233c9" name="Default Changelist" comment="" />
+      <created>1600616273221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600616273221</updated>
+      <workItem from="1600616276783" duration="915000" />
+      <workItem from="1600619064908" duration="1698000" />
+      <workItem from="1600690704110" duration="635000" />
+      <workItem from="1600877513938" duration="2706000" />
+      <workItem from="1600968921405" duration="2464000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="440" y="154" key="#Project_Structure" timestamp="1600616465239">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="440" y="154" key="#Project_Structure/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600616465239" />
+    <state x="765" y="286" key="#com.intellij.ide.util.MemberChooser" timestamp="1600633905987">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="765" y="286" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600633905987" />
+    <state x="739" y="321" key="FileChooserDialogImpl" timestamp="1600618348656">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="739" y="321" key="FileChooserDialogImpl/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600618348656" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1600970399696">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600970399696" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1600970399696">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600970399696" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1600970399695">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600970399695" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1600970399696">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600970399696" />
+    <state x="440" y="154" key="SettingsEditor" timestamp="1600616459319">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="440" y="154" key="SettingsEditor/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600616459319" />
+    <state x="543" y="263" key="new project wizard" timestamp="1600618350968">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="543" y="263" key="new project wizard/0.0.1920.1160/-1080.-480.1080.1920@0.0.1920.1160" timestamp="1600618350968" />
+  </component>
+</project>
