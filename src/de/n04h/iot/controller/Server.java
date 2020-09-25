@@ -1,8 +1,6 @@
 package de.n04h.iot.controller;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -15,6 +13,8 @@ public class Server {
     ServerSocket serverSocket;
     Socket clientSocket;
 
+    long millis;
+
     public Server(Integer port) throws UnknownHostException {
         System.out.println("Server starting...");
         this.port = port;
@@ -26,14 +26,41 @@ public class Server {
 
         serverSocket = new ServerSocket(port);
         clientSocket = serverSocket.accept();
+
+        System.out.print("Status: Connected; Time: 0");
+        millis = System.currentTimeMillis();
+
+        Thread newThread = new Thread(() -> {
+            while(true) {
+                System.out.print("\r");
+                System.out.print("Status: Connected; Time(sec): " + (System.currentTimeMillis() - millis) / 1000);
+
+                try {
+                    getOutputStream().println("Connected");
+                    getInputStream().readLine();
+                } catch (IOException e) {
+                    System.out.println("\nError in connection! Exiting...");
+                    System.exit(0);
+                }
+
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        newThread.start();
     }
 
-    public OutputStream getOutputStream() throws IOException {
-        return clientSocket.getOutputStream();
+    public PrintWriter getOutputStream() throws IOException {
+        PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+        return out;
     }
 
-    public InputStream getInputStream() throws IOException {
-        return clientSocket.getInputStream();
+    public BufferedReader getInputStream() throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        return in;
     }
 
 }

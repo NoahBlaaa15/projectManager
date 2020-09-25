@@ -29,25 +29,38 @@ public class Main {
             case "client":
                 cl();
                 break;
+            case "s":
+                se();
+                break;
+            case "c":
+                cl();
+                break;
         }
     }
 
     private static void cl(){
         System.out.println("Please enter the IP of the Server. (127.0.0.1)");
         String ip = sc.nextLine();
+        if(ip.equalsIgnoreCase("")){
+            ip = "127.0.0.1";
+        }
         System.out.println("Please enter the Port of the Server. (1337)");
         String port = sc.nextLine();
-        Client cl = new Client("Test", ip, Integer.parseInt(port));
-        try {
-            cl.startClient();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if(port.equalsIgnoreCase("")){
+            port = "1337";
         }
+        Client cl = new Client(ip, Integer.parseInt(port));
+        cl.startClient();
     }
 
     private static void se() {
         try {
-            Server se = new Server(1337);
+            System.out.println("Please enter the Port of the Server. (1337)");
+            String port = sc.nextLine();
+            if(port.equalsIgnoreCase("")){
+                port = "1337";
+            }
+            Server se = new Server(Integer.parseInt(port));
             se.startServer();
         } catch (Exception e) {
             e.printStackTrace();
