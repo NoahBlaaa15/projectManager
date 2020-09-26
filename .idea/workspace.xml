@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3beab96-3028-415e-836d-a0125e9233c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/n04h/iot/controller/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/n04h/iot/controller/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/n04h/iot/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/n04h/iot/controller/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/n04h/iot/controller/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/n04h/iot/controller/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,17 +57,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
