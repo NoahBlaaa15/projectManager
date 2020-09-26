@@ -5,6 +5,33 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
+
+interface ServerListener {
+    void response();
+}
+
+class ServerInit {
+    private List<ServerListener> listeners = new ArrayList<>();
+
+    public void addListener(ServerListener add){
+        listeners.add(add);
+    }
+
+    public void request(){
+        for(ServerListener sl : listeners){
+            sl.response();
+        }
+    }
+}
+
+class ServeResp implements ServerListener{
+    @Override
+    public void response(){
+
+    }
+}
 
 public class Server {
 
