@@ -8,30 +8,6 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
-interface ServerListener {
-    void response();
-}
-
-class ServerInit {
-    private List<ServerListener> listeners = new ArrayList<>();
-
-    public void addListener(ServerListener add){
-        listeners.add(add);
-    }
-
-    public void request(){
-        for(ServerListener sl : listeners){
-            sl.response();
-        }
-    }
-}
-
-class ServeResp implements ServerListener{
-    @Override
-    public void response(){
-
-    }
-}
 
 public class Server {
 
@@ -42,17 +18,28 @@ public class Server {
 
     long millis;
 
-    public Server(Integer port) throws UnknownHostException {
+    public Server(Integer port) {
         System.out.println("Server starting...");
         this.port = port;
-        System.out.println("With Local-IP: " + InetAddress.getLocalHost().getHostAddress() + " and Port: " + port);
+        try {
+            System.out.println("With Local-IP: " + InetAddress.getLocalHost().getHostAddress() + " and Port: " + port);
+        } catch (UnknownHostException e) {
+            System.out.println("Not connected to a Network!");
+            e.printStackTrace();
+        }
     }
 
-    public void startServer() throws IOException {
+    public void startServer(ListenerInit li) {
         System.out.println("Opening Port: " + port);
 
-        serverSocket = new ServerSocket(port);
-        clientSocket = serverSocket.accept();
+        try {
+            serverSocket = new ServerSocket(port);
+            clientSocket = serverSocket.accept();
+        } catch (IOException e) {
+            System.out.println("Port blocked!");
+            e.printStackTrace();
+        }
+
 
         System.out.print("Status: Connected; Time: 0");
         millis = System.currentTimeMillis();
@@ -64,10 +51,16 @@ public class Server {
 
                 try {
                     getOutputStream().println("Connected");
-                    getInputStream().readLine();
+                    li.requestServer(getInputStream().readLine());
                 } catch (IOException e) {
-                    System.out.println("\nError in connection! Exiting...");
-                    System.exit(0);
+                    System.out.println("\nClient disconnected! Reopening...");
+                    try {
+                        clientSocket.close();
+                        clientSocket = serverSocket.accept();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+                    millis = System.currentTimeMillis();
                 }
 
                 try {
@@ -89,5 +82,6 @@ public class Server {
         BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         return in;
     }
+
 
 }

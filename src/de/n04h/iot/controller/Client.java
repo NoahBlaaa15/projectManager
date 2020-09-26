@@ -19,7 +19,7 @@ public class Client {
         this.ip = ip;
     }
 
-    public void startClient() {
+    public void startClient(ListenerInit li) {
         System.out.println("Connecting to Server: " + ip + ":" + port);
 
         try {
@@ -39,9 +39,9 @@ public class Client {
 
                 try {
                     getOutputStream().println("Connected");
-                    getInputStream().readLine();
+                    li.requestClient(getInputStream().readLine());
                 } catch (IOException e) {
-                    System.out.println("\nError in connection! Exiting...");
+                    System.out.println("\nServer disconnected! Exiting...");
                     System.exit(0);
                 }
 
