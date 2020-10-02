@@ -50,8 +50,8 @@ public class Server {
                 System.out.print("Status: Connected; Time(sec): " + (System.currentTimeMillis() - millis) / 1000);
 
                 try {
-                    getOutputStream().println("Connected");
-                    li.requestServer(getInputStream().readLine());
+                    getOutputStream().println("connected");
+                    li.requestServer(getInputStream().readLine(), getOutputStream(), getInputStream());
                 } catch (IOException e) {
                     System.out.println("\nClient disconnected! Reopening...");
                     try {
@@ -83,5 +83,13 @@ public class Server {
         return in;
     }
 
+    public void sendMessage(String message){
+        try {
+            getOutputStream().println(message);
+        } catch (IOException e) {
+            System.out.println("\nClient disconnected! Exiting...");
+            System.exit(0);
+        }
+    }
 
 }
