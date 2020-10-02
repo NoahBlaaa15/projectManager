@@ -2,6 +2,7 @@ package de.n04h.iot.controller;
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.*;
 import java.util.*;
 
@@ -67,14 +68,41 @@ public class Main{
 }
 
 class ServerEvent implements ServerListener {
-    //TODO: Implement other messages
+
     @Override
-    public void responseServer(String message) { System.out.println(message); }
+    public void startProgram(PrintWriter outputStream) {
+        System.out.println("Starting program...");
+        outputStream.println("started");
+    }
+
+    @Override
+    public void stopProgram(PrintWriter outputStream) {
+        System.out.println("Stopping program...");
+        outputStream.println("stopped");
+    }
+
+    @Override
+    public void responseStatus(PrintWriter outputStream) {
+        System.out.println("Sending Status...");
+        outputStream.println("status-re:" + "TODO");
+    }
 }
 
 class ClientEvent implements ClientListener {
-    //TODO: Implement other messages
+
     @Override
-    public void responseClient(String message) { System.out.println(message); }
+    public void responseStatus(String message) {
+        System.out.println("Status: " + message);
+    }
+
+    @Override
+    public void programStarted() {
+        System.out.println("Started program");
+    }
+
+    @Override
+    public void programStopped() {
+        System.out.println("Stopped program");
+    }
 }
 

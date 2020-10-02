@@ -38,8 +38,8 @@ public class Client {
                 System.out.print("Status: Connected; Time(sec): " + (System.currentTimeMillis() - millis) / 1000);
 
                 try {
-                    getOutputStream().println("Connected");
-                    li.requestClient(getInputStream().readLine());
+                    getOutputStream().println("connected");
+                    li.requestClient(getInputStream().readLine(), getOutputStream(), getInputStream());
                 } catch (IOException e) {
                     System.out.println("\nServer disconnected! Exiting...");
                     System.exit(0);
@@ -63,6 +63,15 @@ public class Client {
     public BufferedReader getInputStream() throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(serverConnection.getInputStream()));
         return in;
+    }
+
+    public void sendMessage(String message){
+        try {
+            getOutputStream().println(message);
+        } catch (IOException e) {
+            System.out.println("\nServer disconnected! Exiting...");
+            System.exit(0);
+        }
     }
 
 }
